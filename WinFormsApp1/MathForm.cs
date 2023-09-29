@@ -7,15 +7,14 @@ namespace WinFormsApp1
         public MathForm()
         {
             InitializeComponent();
-
         }
+
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             try
             {
                 double cal;
-                //string result;
                 switch (boxOperadores.Text)
                 {
                     case ">":
@@ -74,29 +73,22 @@ namespace WinFormsApp1
                         break;
                     case "PI":
                         BoxResult.Text = Convert.ToString(Math.PI);
-                        //cal = Math.(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text));
-                        //BoxResult.Text = Convert.ToString(cal);
-                        //Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text)
                         break;
                     case "POW":
                         cal = Math.Pow(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text));
                         BoxResult.Text = Convert.ToString(cal);
-                        //Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text)
                         break;
                     case "LOG":
                         cal = Math.Log(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text));
                         BoxResult.Text = Convert.ToString(cal);
-                        //Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text)
                         break;
                     case "MIN":
                         cal = Math.Min(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text));
                         BoxResult.Text = Convert.ToString(cal);
-                        //Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text)
                         break;
                     case "MAX":
                         cal = Math.Max(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text));
                         BoxResult.Text = Convert.ToString(cal);
-                        //Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text)
                         break;
                 }
             }

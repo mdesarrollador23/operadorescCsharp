@@ -43,10 +43,9 @@
             // 
             btnCalcular.Enabled = false;
             btnCalcular.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCalcular.Location = new Point(138, 284);
-            btnCalcular.Margin = new Padding(3, 4, 3, 4);
+            btnCalcular.Location = new Point(121, 213);
             btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(131, 53);
+            btnCalcular.Size = new Size(115, 40);
             btnCalcular.TabIndex = 4;
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = true;
@@ -54,41 +53,39 @@
             // 
             // BoxN1
             // 
-            BoxN1.Location = new Point(207, 69);
-            BoxN1.Margin = new Padding(3, 4, 3, 4);
+            BoxN1.Location = new Point(181, 52);
             BoxN1.MaxLength = 15;
             BoxN1.Name = "BoxN1";
             BoxN1.PlaceholderText = "0.0";
-            BoxN1.Size = new Size(156, 27);
+            BoxN1.Size = new Size(137, 23);
             BoxN1.TabIndex = 2;
             BoxN1.KeyPress += BoxN1_KeyPress;
             // 
             // BoxN2
             // 
-            BoxN2.Location = new Point(207, 108);
-            BoxN2.Margin = new Padding(3, 4, 3, 4);
+            BoxN2.Location = new Point(181, 81);
             BoxN2.MaxLength = 15;
             BoxN2.Name = "BoxN2";
             BoxN2.PlaceholderText = "0.0";
-            BoxN2.Size = new Size(156, 27);
+            BoxN2.Size = new Size(137, 23);
             BoxN2.TabIndex = 3;
             BoxN2.KeyPress += BoxN2_KeyPress;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(29, 33);
+            label1.Location = new Point(25, 25);
             label1.Name = "label1";
-            label1.Size = new Size(172, 20);
+            label1.Size = new Size(136, 15);
             label1.TabIndex = 3;
             label1.Text = "Seleccione la Operacion:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(112, 111);
+            label2.Location = new Point(98, 83);
             label2.Name = "label2";
-            label2.Size = new Size(78, 20);
+            label2.Size = new Size(63, 15);
             label2.TabIndex = 4;
             label2.Text = "Numero 2:";
             // 
@@ -98,39 +95,37 @@
             boxOperadores.DropDownStyle = ComboBoxStyle.DropDownList;
             boxOperadores.FormattingEnabled = true;
             boxOperadores.Items.AddRange(new object[] { ">", "<", ">=", "<=", "==", "!=", "+", "-", "*", "/", "PI", "POW", "LOG", "MAX", "MIN" });
-            boxOperadores.Location = new Point(207, 25);
-            boxOperadores.Margin = new Padding(3, 4, 3, 4);
+            boxOperadores.Location = new Point(181, 19);
             boxOperadores.Name = "boxOperadores";
-            boxOperadores.Size = new Size(156, 28);
+            boxOperadores.Size = new Size(137, 23);
             boxOperadores.TabIndex = 1;
             boxOperadores.TextChanged += boxOperadores_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(112, 72);
+            label3.Location = new Point(98, 54);
             label3.Name = "label3";
-            label3.Size = new Size(78, 20);
+            label3.Size = new Size(63, 15);
             label3.TabIndex = 6;
             label3.Text = "Numero 1:";
             // 
             // BoxResult
             // 
             BoxResult.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            BoxResult.Location = new Point(14, 173);
-            BoxResult.Margin = new Padding(3, 4, 3, 4);
+            BoxResult.Location = new Point(12, 126);
             BoxResult.MaxLength = 20;
             BoxResult.Multiline = true;
             BoxResult.Name = "BoxResult";
             BoxResult.ReadOnly = true;
-            BoxResult.Size = new Size(385, 73);
+            BoxResult.Size = new Size(337, 67);
             BoxResult.TabIndex = 7;
             // 
             // MathForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(413, 353);
+            ClientSize = new Size(361, 265);
             Controls.Add(BoxResult);
             Controls.Add(label3);
             Controls.Add(boxOperadores);
@@ -140,7 +135,6 @@
             Controls.Add(BoxN1);
             Controls.Add(btnCalcular);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MathForm";
