@@ -14,50 +14,25 @@ namespace WinFormsApp1
         {
             try
             {
-                double cal;
                 switch (boxOperadores.Text)
                 {
                     case ">":
-                        if (Convert.ToInt16(BoxN1.Text) > Convert.ToInt16(BoxN2.Text))
-                        {
-                            BoxResult.Text = "true";
-                        }
-                        else { BoxResult.Text = "false"; }
+                        BoxResult.Text = Convert.ToInt64(BoxN1.Text) > Convert.ToInt64(BoxN2.Text) ? "true" : "false";
                         break;
                     case "<":
-                        if (Convert.ToInt16(BoxN1.Text) < Convert.ToInt16(BoxN2.Text))
-                        {
-                            BoxResult.Text = "true";
-                        }
-                        else { BoxResult.Text = "false"; }
+                        BoxResult.Text = Convert.ToInt64(BoxN1.Text) < Convert.ToInt64(BoxN2.Text) ? "true" : "false";
                         break;
                     case ">=":
-                        if (Convert.ToInt16(BoxN1.Text) >= Convert.ToInt16(BoxN2.Text))
-                        {
-                            BoxResult.Text = "true";
-                        }
-                        else { BoxResult.Text = "false"; }
+                        BoxResult.Text = Convert.ToInt64(BoxN1.Text) >= Convert.ToInt64(BoxN2.Text) ? "true" : "false";
                         break;
                     case "<=":
-                        if (Convert.ToInt16(BoxN1.Text) <= Convert.ToInt16(BoxN2.Text))
-                        {
-                            BoxResult.Text = "true";
-                        }
-                        else { BoxResult.Text = "false"; }
+                        BoxResult.Text = Convert.ToInt64(BoxN1.Text) <= Convert.ToInt64(BoxN2.Text) ? "true" : "false";
                         break;
                     case "==":
-                        if (Convert.ToInt16(BoxN1.Text) == Convert.ToInt16(BoxN2.Text))
-                        {
-                            BoxResult.Text = "true";
-                        }
-                        else { BoxResult.Text = "false"; }
+                        BoxResult.Text = Convert.ToInt64(BoxN1.Text) == Convert.ToInt64(BoxN2.Text) ? "true" : "false";
                         break;
                     case "!=":
-                        if (Convert.ToInt16(BoxN1.Text) != Convert.ToInt16(BoxN2.Text))
-                        {
-                            BoxResult.Text = "true";
-                        }
-                        else { BoxResult.Text = "false"; }
+                        BoxResult.Text = Convert.ToInt64(BoxN1.Text) != Convert.ToInt64(BoxN2.Text) ? "true" : "false";
                         break;
                     case "+":
                         BoxResult.Text = Convert.ToString(Convert.ToDouble(BoxN1.Text) + Convert.ToDouble(BoxN2.Text));
@@ -75,26 +50,22 @@ namespace WinFormsApp1
                         BoxResult.Text = Convert.ToString(Math.PI);
                         break;
                     case "POW":
-                        cal = Math.Pow(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text));
-                        BoxResult.Text = Convert.ToString(cal);
+                        BoxResult.Text = Convert.ToString(Math.Pow(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text)));
                         break;
                     case "LOG":
-                        cal = Math.Log(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text));
-                        BoxResult.Text = Convert.ToString(cal);
+                        BoxResult.Text = Convert.ToString(Math.Log(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text)));
                         break;
                     case "MIN":
-                        cal = Math.Min(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text));
-                        BoxResult.Text = Convert.ToString(cal);
+                        BoxResult.Text = Convert.ToString(Math.Min(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text)));
                         break;
                     case "MAX":
-                        cal = Math.Max(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text));
-                        BoxResult.Text = Convert.ToString(cal);
+                        BoxResult.Text = Convert.ToString(Math.Max(Convert.ToDouble(BoxN1.Text), Convert.ToDouble(BoxN2.Text)));
                         break;
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show($"Complete los campos.");
+                MessageBox.Show("Complete los campos.");
             }
         }
 
@@ -105,7 +76,6 @@ namespace WinFormsApp1
                 e.Handled = true;
                 return;
             }
-            // solo 1 punto decimal
             if ((e.KeyChar == '.') && (((TextBox)sender).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
@@ -119,7 +89,6 @@ namespace WinFormsApp1
                 e.Handled = true;
                 return;
             }
-            // solo 1 punto decimal
             if ((e.KeyChar == '.') && (((TextBox)sender).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
